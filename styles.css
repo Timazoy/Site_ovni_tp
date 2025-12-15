@@ -1,0 +1,19 @@
+/*<weight>: Use a value from 200 to 800
+<uniquifier>: Use a unique and descriptive class name*/
+
+body {
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.square-list {
+  list-style:square ;
+}
+
+.lien-externes {
+  text-decoration: underline;
+  color: #000000;
+  border: 1px solid transparent;
+}
