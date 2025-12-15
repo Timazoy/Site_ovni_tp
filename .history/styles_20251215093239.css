@@ -1,7 +1,7 @@
 /*<weight>: Use a value from 200 to 800
 <uniquifier>: Use a unique and descriptive class name*/
 
-body {
+.body {
   font-family: "Oxanium", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
