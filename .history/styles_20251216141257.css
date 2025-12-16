@@ -21,6 +21,6 @@ body {
 /* Carousel: forcer les images à une même taille */
 .carousel-item img {
   width: 100%;
-  height: 500px;
+  height: 10%;
   object-fit: contain;
 }
