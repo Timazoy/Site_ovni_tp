@@ -21,6 +21,21 @@ body {
 /* Carousel: forcer les images à une même taille */
 .carousel-item img {
   width: 100%;
-  height: 500px;
+  height: 600px;
   object-fit: contain;
+}
+
+/* Responsive carousel pour petits écrans */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 300px; /* Réduire la hauteur sur mobile */
+  }
+  
+  #carouselExampleCaptions {
+    margin-bottom: 1rem; /* Réduire l'espace en dessous */
+  }
+  
+  .carousel-indicators {
+    bottom: -30px; /* Ajuster la position des indicateurs */
+  }
 }
