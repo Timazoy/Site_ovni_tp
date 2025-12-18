@@ -25,15 +25,36 @@ html[data-bs-theme="dark"] {
 }
 
 html[data-bs-theme="dark"] .navbar,
-html[data-bs-theme="dark"] .card,
-html[data-bs-theme="dark"] footer {
+html[data-bs-theme="dark"] .card {
   background-color: #0f1720;
+  color: #e6eef6;
+}
+
+/* Make the footer use the same background as the page root in dark mode */
+html[data-bs-theme="dark"] footer {
+  background-color: transparent;
   color: #e6eef6;
 }
 
 html[data-bs-theme="dark"] a { color: #9ecbff; }
 
 html[data-bs-theme="dark"] .card .card-body { background: transparent; }
+
+/* Ensure body uses the same page background and elements below the footer stay transparent */
+html[data-bs-theme="dark"] body {
+  background-color: transparent;
+}
+
+footer {
+  box-shadow: none;
+}
+
+/* Any element after the footer should also be transparent in dark mode */
+html[data-bs-theme="dark"] footer,
+html[data-bs-theme="dark"] footer + *,
+html[data-bs-theme="dark"] footer ~ * {
+  background: transparent;
+}
 
 /* Toggle button appearance in dark mode */
 html[data-bs-theme="dark"] .btn-outline-secondary {
@@ -67,4 +88,22 @@ html[data-bs-theme="dark"] .btn-outline-secondary {
 .card img {
   height: 100%;
   object-fit: cover;
+}
+
+/* Ensure footer stays at the bottom on all pages */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* The main page container should grow to push the footer down. Target direct child containers to avoid changing nested containers. */
+body > .container,
+body > main {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
 }
