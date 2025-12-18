@@ -18,6 +18,29 @@ body {
   border: 1px solid transparent;
 }
 
+/* Basic dark-mode fallbacks to ensure visual change when data-bs-theme="dark" */
+html[data-bs-theme="dark"] {
+  background-color: #0b0f14;
+  color: #e6eef6;
+}
+
+html[data-bs-theme="dark"] .navbar,
+html[data-bs-theme="dark"] .card,
+html[data-bs-theme="dark"] footer {
+  background-color: #0f1720;
+  color: #e6eef6;
+}
+
+html[data-bs-theme="dark"] a { color: #9ecbff; }
+
+html[data-bs-theme="dark"] .card .card-body { background: transparent; }
+
+/* Toggle button appearance in dark mode */
+html[data-bs-theme="dark"] .btn-outline-secondary {
+  color: #e6eef6;
+  border-color: rgba(230,238,246,0.12);
+}
+
 /* Carousel: forcer les images à une même taille */
 .carousel-item img {
   width: 100%;
